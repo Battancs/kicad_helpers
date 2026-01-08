@@ -82,11 +82,9 @@ public:
      */
     virtual void turnLeft(double angle) {
         heading += angle;
-        while (heading < 0.0) {
+        heading = std::fmod(heading, 360.0);
+        if (heading < 0.0) {
             heading += 360.0;
-        }
-        while (heading >= 360.0) {
-            heading -= 360.0;
         }
     }
     

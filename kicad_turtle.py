@@ -45,7 +45,7 @@ class KicadPcbTurtle:
             if(layerid!=-1):
                 item.SetLayer(layerid)
             else:
-                print ('hiba')
+                print ('error')
                 exit(1)
 
             net = self.board.GetNetsByName()
